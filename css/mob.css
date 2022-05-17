@@ -1,0 +1,309 @@
+@media only screen and (max-width: 1024px){
+    .container{
+        width: 98%;
+    }
+
+    .contacts-map{
+        border: 7px solid #fff;
+    }
+
+    .blog-and-news-title img{
+        height: 215px;
+      }
+    
+    .seo-text .video{
+        justify-content:  space-evenly;
+    }
+    
+    .video iframe{
+        width: 46%; 
+    }
+
+    .header .container{
+        width: 100%;
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .logo {
+        width: 100%;
+      }
+
+    .logo img{
+        margin: 10px auto;
+    }
+    
+    .header-contacts {
+        width: 100%;
+        padding-left: 20px;
+        height: 70px;
+        justify-content: space-evenly;
+    }
+
+    .header-contacts #anytime{
+        width: 25%;
+        margin-left: 30px;
+    }
+
+    .header-contact-phone::before, .header-contact-location::before, .header-contact-sch::before{
+        margin-top: 0px; 
+    }
+
+    
+    .offers-items{ /*лучше данный стиль прописать в styles.css
+        flex-wrap: wrap; */
+        justify-content:  space-evenly;
+    }
+
+    .offers-item {
+        width: 44%;
+        margin: 15px;
+      }
+
+    .soc-fixed{
+        display: none;
+    }
+
+    .servises-item {
+        width: 46%;
+        padding-bottom: 40px;
+      }
+    
+    .servises-items{ 
+        justify-content:  space-evenly;
+    }
+
+    /* Для этого блока используем вариант отмены flex вместо увеличения шиирны внутренних блоков и использования wrap */
+    .contacts-items {
+        display: block;
+    }
+
+    .contacts-order, .contacts-contact{
+        width: 96%;
+        margin: 0 auto;  
+    }
+    
+    .contacts-order{
+        margin-bottom: 40px;
+    }
+
+    .blog-and-news-title img{
+        height: 160px;
+      }
+
+    .blog-and-news-items {
+        justify-content: space-evenly;
+      }
+
+    .seo-text p{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 0px;
+    }
+
+    .video iframe{
+        width: 90%; 
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+    .products-items{
+        justify-content: space-evenly;
+    }
+
+    .products-item{
+        width: 44%;
+    }
+
+    .about-company .container{
+        width: 90%;
+    }
+
+    .about-company-items{
+        display: block;
+    }
+
+    .company-item{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .company-info p{
+        text-align: center;
+    }
+
+    .company-info a{
+        margin-bottom: 50px;
+    }
+
+    .slider .container{
+        width: 88%;
+    }
+
+    .poster {
+        width: auto;
+        padding-top: 220px;
+    }
+
+    .top-menu ul li a{
+        font-size: 13px;
+    }
+}
+
+
+@media only screen and (max-width: 425px){
+
+    .header-contacts #anytime{
+        display: none;
+    }
+
+    .header-contact-num{
+        width: 50%;
+    }
+
+    .header-contact-location{
+        font-size: 90%;
+    }
+
+
+    .offers-item {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+    h2::before, h2::after{
+        display: none;
+    }
+
+    .soc-fixed{
+        display: none;
+    }
+
+    .servises-item {
+        width: 85%;
+        padding-bottom: 30px;
+      }
+
+    .contacts-order{
+        padding: 15px;
+    }
+
+    .blog-and-news-items {
+        display: block;
+      }
+    
+    .blog-and-news-item {
+        width: 96%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .blog-and-news-title img {
+        height: 285px;
+      }
+
+    .blog-and-news-headertext{
+        align-items: center
+    }
+    
+    .products-item{
+        width: 98%;
+    }
+
+    .poster h1{
+        font-size: 34px;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px){
+    .soc-fixed{
+        display: none;
+    }
+
+    h2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .blog-and-news-title img {
+        height: 230px;
+      }
+    
+    .poster h1{
+        font-size: 30px;
+    }
+
+    .poster p{
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    h2{
+        font-size: 24px;
+    }
+
+    .servises-item-header {
+         display: block; /*для отмены flex */
+        justify-content: space-between;
+    }
+    .servises-headerpict{
+        margin: 0 auto;
+        display: none;
+    }
+
+    .servises-headertext{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .servises-headertext h3{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .servises-item p{
+        text-align: center;
+    }
+
+    .servises-item-text {
+        padding-top: 10px;
+    }
+
+    .servises-item{
+        margin: auto;
+    }
+
+    .contacts-order input[type="submit"] {
+        width: 35%;
+    }
+
+    .contacts-adress{
+        font-size: 80%;
+    }
+
+    .blog-and-news-title img {
+        height: 190px;
+      }
+
+    .slider {
+        height: 590px;}
+    
+    .poster {
+        padding-top: 175px;}
+
+    .poster h1{
+        font-size: 26px;
+    }
+
+    .poster p{
+        font-size: 16px;
+    }
+}
