@@ -9,7 +9,7 @@ ol,ul{list-style:none;}
 blockquote,q{quotes:none;}
 table,table td{padding:0;border:none;border-collapse:collapse;}
 img{vertical-align:top;}
-embed{vertical-align:top;}
+embed{vertical-align:topс;}
 input[type=text],textarea{outline:none;border-radius:0;}
 
 *{ /*селектор * означает все теги и контейнеры*/
@@ -160,8 +160,7 @@ h2::before{
 /* Переключатель страниц */
 
 .top-menu{
-    background: #4E4E50;
-    padding-bottom: 1px; 
+    background: #4E4E50; 
 }
 
 .top-menu ul{
