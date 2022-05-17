@@ -9,7 +9,7 @@ ol,ul{list-style:none;}
 blockquote,q{quotes:none;}
 table,table td{padding:0;border:none;border-collapse:collapse;}
 img{vertical-align:top;}
-embed{vertical-align:topс;}
+embed{vertical-align:top;}
 input[type=text],textarea{outline:none;border-radius:0;}
 
 *{ /*селектор * означает все теги и контейнеры*/
