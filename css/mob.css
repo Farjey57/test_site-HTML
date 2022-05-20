@@ -1,3 +1,11 @@
+@media only screen and (max-width: 1170px){
+    main .container{
+        width: 98% ;
+    }
+ 
+}
+
+
 @media only screen and (max-width: 1024px){
     .container{
         width: 98%;
@@ -22,12 +30,40 @@
     .header .container{
         width: 100%;
     }
+
+    .header-contact-value{
+        font-size: 15px;
+    }
+
+    .header-contact-bar p{
+        font-size: 13px;
+    }
+    
+}
+
+@media only screen and (max-width: 890px) {
+    .top-menu ul li a {
+        font-size: 15px
+    }
+
+    h2{
+        padding-top: 70px;
+    }
     
 }
 
 
 @media only screen and (max-width: 768px){
 
+    h2{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    h2::before, h2::after{
+        display: none;
+    }
+    
     .logo {
         width: 100%;
       }
@@ -38,14 +74,16 @@
     
     .header-contacts {
         width: 100%;
-        padding-left: 20px;
-        height: 70px;
-        justify-content: space-evenly;
+        height: 65px;
+        padding-top: 0px;
     }
 
-    .header-contacts #anytime{
-        width: 25%;
-        margin-left: 30px;
+    .header-contact-value{
+        font-size: 14px;
+    }
+
+    .header-contact-bar p{
+        font-size: 12px;
     }
 
     .header-contact-phone::before, .header-contact-location::before, .header-contact-sch::before{
@@ -107,7 +145,7 @@
 
     .video iframe{
         width: 90%; 
-        padding-top: 20px;
+        padding-top: 30px;
         margin: 0 auto;
     }
     .products-items{
@@ -146,23 +184,54 @@
 
     .poster {
         width: auto;
-        padding-top: 220px;
+        padding-top: 250px;
+    }
+
+    .poster h1{
+        font-size: 40px;
     }
 
     .top-menu ul li a{
         font-size: 13px;
     }
+
+    .top-menu{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 525px){
+    .header-contact-item::before{
+        display: none;
+    }
+
+    .header-contact-bar{
+        margin: 0;
+    }
+
+    .header-contacts {
+        height: 60px;
+    }
+
+    .poster h1{
+        font-size: 34px;
+    }
+
+    .poster{
+        padding-top: 210px;
+    }
+
 }
 
 
 @media only screen and (max-width: 425px){
 
+    
+    
     .header-contacts #anytime{
         display: none;
-    }
-
-    .header-contact-num{
-        width: 50%;
     }
 
     .header-contact-location{
@@ -174,10 +243,6 @@
         width: 80%;
         margin: 10px auto;
       }
-
-    h2::before, h2::after{
-        display: none;
-    }
 
     .soc-fixed{
         display: none;
@@ -215,7 +280,7 @@
     }
 
     .poster h1{
-        font-size: 34px;
+        font-size: 30px;
     }
 
 }
@@ -297,7 +362,7 @@
         height: 590px;}
     
     .poster {
-        padding-top: 175px;}
+        padding-top: 210px;}
 
     .poster h1{
         font-size: 26px;

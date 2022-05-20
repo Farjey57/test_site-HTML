@@ -4,11 +4,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta charset="UTF-8">
-    <title>Сервис</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+
+    <title>Сервис Елизаветка</title>
+    <link rel="stylesheet" href="font/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mob.css">
+
+    <style>
+        /* Использование внутреннего стиля для текущей страницы
+        h2{
+            font-size: 50px;
+        }
+        main{
+            background-color: brown;
+        } */
+    </style>
+
+
+
 </head>
 <body>
+
+<div class="btn-mob">
+    <p>Открыть меню</p>
+</div>
+<div class="menu-mob">
+    <ul>
+        <li class="topactive"><a href="">Главная</a></li>
+        <li><a href="">Статьи и новости</a></li>
+        <li><a href="">Услуги</a></li>
+        <li><a href="">Каталог</a></li>
+        <li><a href="">Портфолио</a></li>
+        <li><a href="">Партнёры</a></li>
+        <li><a href="">Контакты</a></li>
+    </ul>
+</div>
 
 <header class="header">
 
@@ -20,7 +54,7 @@
                 </div>
                 <div class="header-contacts">
                     <div class="header-contact-num">
-                        <div class="header-contact-phone">
+                        <div class="header-contact-item phone">
                             <div class="header-contact-bar">
                                 <span class="header-contact-value">
                                     <a href="tel:+7 (928) 662-93-20">8 (928) 662-93-20</a>
@@ -30,7 +64,7 @@
                         </div>
                     </div>
                     <div class="header-contact-num">
-                        <div class="header-contact-location">
+                        <div class="header-contact-item location">
                             <div class="header-contact-bar">
                                 <span class="header-contact-value">Кубанская улица, 131</span>
                                 <p>350915, Елизаветинская</p>
@@ -38,7 +72,7 @@
                         </div>
                     </div>
                     <div class="header-contact-num" id="anytime">
-                        <div class="header-contact-sch">
+                        <div class="header-contact-item sch">
                             <div class="header-contact-bar">
                                 <span class="header-contact-value">09:00 - 21:00</span>
                                 <p>вск выходной</p>
@@ -105,6 +139,13 @@
 
         </div>
     </div>
+
+    <div class="score">
+        <div class="container">
+            <div id="out" class="out-num" style="font-size: 50px;color:rgb(233, 233, 233);text-align: center;" >0</div>
+        
+        </div>
+    </div>   
 
     <div class="offers">
         <div class="container">
@@ -575,6 +616,27 @@
     <img src="images/YouTube.png" alt="">
 </div>
 
+<!-- Скрипт на JS. const time и step - время и шаг.
+-->
+<script>
+    const time = 500;
+    const step = 10;
+
+function outNum(num, elem) {
+  let e = document.querySelector("#out");
+  n = 0;
+  let t = Math.round(time / (num / step));
+  let interval = setInterval(() => {
+    n = n + step;
+    if (n == num) {
+      clearInterval(interval);
+    }
+    e.innerHTML = n;
+  }, t);
+}
+
+outNum(2000, "#out");
+</script>
 
 </body>
 </html>

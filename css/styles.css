@@ -17,7 +17,7 @@ input[type=text],textarea{outline:none;border-radius:0;}
 }
 
 .container{
-    width: 1170px; /*Ширина блока*/
+    max-width: 1170px; /*Ширина блока*/
     margin: 0 auto;
     font-family: Arial;
 }
@@ -72,6 +72,53 @@ h2::before{
 
 
 
+.btn-mob::before{
+    font-family: FontAwesome;
+    content: '\f0c9';
+    font-size: 30px;
+}
+
+.btn-mob{
+    background-color: #1A1A1D;
+    color: rgb(233, 233, 233);
+    position: fixed;
+    z-index: 800;
+    top: 0px;
+    left: 0px;
+    padding: 8px 0 8px 35px;
+    width: 100%;
+}
+
+.btn-mob p{
+    font-family: 'Noto Sans',Arial,sans-serif;
+    display: inline-block;
+    padding: 10px 0px 0px 25px;
+}
+
+.menu-mob{
+    background: #1A1A1D;
+    width: 300px;
+    position: fixed;
+    z-index: 900;
+    top: 52px;
+    left: -300px;
+}
+
+.menu-mob:active{
+    left: 0;
+}
+
+.menu-mob ul{
+    padding: 20px;
+}
+
+.menu-mob ul li{
+    font-family: 'Noto Sans',Arial,sans-serif;
+    padding: 20px;
+}
+
+
+
 .header{
     background-color: #1A1A1D;
     height: 160px;
@@ -87,7 +134,8 @@ h2::before{
     position: absolute;
     margin-top: 50px;
     z-index: 500;
-    width: inherit;
+    max-width: 1170px;
+    width: 100%;
 }
 
 .top-contacts{
@@ -98,7 +146,7 @@ h2::before{
 /* логотип */
 
 .logo{
-    width: 30%;
+    width: 25%;
     padding: 10px;
 }
    
@@ -112,39 +160,61 @@ h2::before{
 
 .header-contacts{
     display: flex;
-    justify-content: center;
-    height: 90px;
+    justify-content: space-evenly;
+    height: auto;
     width: 70%;
     color: rgb(233, 233, 233);
     font-size: 13px;
+    padding-top: 35px;
 }
 
 .header-contact-num{
-    width: 33%;
+    width: auto;
 }
 
-.header-contact-phone::before, .header-contact-location::before, .header-contact-sch::before{
-    font-size: 40px;
-    padding: 1px;
-    margin-top: 25px;
+.header-contacts #anytime{
+    padding-left: 10px;
+}
+
+/* Вариант, как выбрать из списка одинаковых имён
+ .header-contact-num:nth-child(3){
+    padding-left: 10px;
+} */
+
+.header-contact-item::before{
+    font-family: FontAwesome;
     display: inline-block;
-    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(233, 233, 233);
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 50%;
+    line-height: 20px;
+    width: 32px;
+    padding: 6px 0;
+    transition: all .3s linear;
 }
 
-.header-contact-phone::before{
-    content: '\2706';
+.phone::before{
+    content: '\f095';
 }
 
-.header-contact-location::before{
-    content: '\25ce';
+.location::before{
+    content: '\f041';
 }
 
-.header-contact-sch::before{
-    content: '\25d4';
+.sch::before{
+    content: '\f017';
 }
+
+.phone:hover::before {
+    color: #4E4E50;
+    border: 2px solid #4E4E50;
+    transition: all .3s linear;
+  }
 
 .header-contact-bar{
-    margin: -41px 0px 0px 55px;
+    margin: -35px 0px 0px 55px;
 }
 
 .header-contact-bar p{
@@ -190,19 +260,21 @@ h2::before{
 }
 
 .top-menu ul li a{
+    font-family: 'Oswald', sans-serif;
     color: rgb(233, 233, 233);
     text-decoration: none;
     padding: 20px 19px 19px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 17px;
     display: block;
+    text-align: center;
 }
 
 /* превью сайта */
 
 .slider{
     width: 100%;
-    height: 730px;
+    /* height: 730px; */
     background-image: url(../images/MicrosoftTeams-image.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,6 +286,7 @@ h2::before{
     width: 750px;
     margin: 0 auto;
     padding-top: 250px;
+    padding-bottom: 100px;
 }
 
 h1{
@@ -245,6 +318,7 @@ h1 span{
     margin-top: 25px;
     font-size: 16px;
     transition: all .3 linear;
+    position: relative;
 }
 
 .btn-slider a:hover{
@@ -255,34 +329,34 @@ h1 span{
 .btn-slider::after{
     background: rgb(233, 233, 233);
     color: #C3073F;
-    font-family: Arial, Helvetica, sans-serif;
-    content: "\2B9E";
+    font-family: FontAwesome, sans-serif;
+    content: "\f105";
     /* content: "\f105"; */
-    font-size: 28px;
+    font-size: 31px;
      /* position: absolute; */
     /* top: 0;
     bottom: 0;
     right: -42px; */
     text-align: center;
     /* width: 42px; */
-    line-height: 89px;
+    line-height: 88px;
     /* height: 44px; */
     transition: all .5s ease;
-    padding: 3px 5px 1px 5px;
+    padding: 3px 10px 2px 13px;
     /* padding-left: 5px;
     padding-right: 5px;
     padding-top: 4px;
     padding-bottom: 2px; */
-    margin-left: -6px;
+    margin-left: -5px;
 }
 
-.about-company{
+/* .about-company{
 
-}
+} */
 
 .about-company-items{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .company-item{
@@ -344,11 +418,19 @@ h1 span{
 
 } */
 
+/* .out-num{
+    font-size: 50px;
+    color: rgb(233, 233, 233);
+    text-align: center;
+} 
+Внешний scc, данный блок стилизуем с помощью внедрённого стиля в сам html тег
+*/
 
 
-.offers{
-   
-}
+
+/* .offers{
+    
+} */
 
 .offers-items{
     display: flex;
@@ -364,6 +446,16 @@ h1 span{
 .offers-image img{
     width: 100%;
     height: 180px;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+.offers-image img:hover{
+    transform: scale(1.2);
+}
+
+.offers-image{
+    overflow: hidden;
 }
 
 .offers-text p{
@@ -387,9 +479,9 @@ h1 span{
 
 /* Блок наши Продукты */
 
-.products{
+/* .products{
 
-}
+} */
 
 .products-items{
     display: flex;
@@ -405,6 +497,26 @@ h1 span{
 
 .products-image{
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.products-image::before{
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 1;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.25) 100%);
+    transform: skewX(-24deg);
+    transition: all 0.5s ease-out;
+}
+
+  .products-image:hover::before{
+    left: 75%;
 }
 
 .products-image img{
@@ -503,10 +615,10 @@ h1 span{
     padding-top: 20px;
 }
 
-.seo-text{
-    /* width: 1170px;
-    margin: 0 auto; */
-}
+/* .seo-text{
+     width: 1170px;
+    margin: 0 auto; 
+} */
 
 .seo-text .video{
     padding-top: 10px;
@@ -514,6 +626,9 @@ h1 span{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.video iframe{
+    width: 49%;}
 
 .seo-text p{
     color: rgb(233, 233, 233);
@@ -548,9 +663,9 @@ h1 span{
 /* Таблица пример */
 
 
-.contacts{
+/* .contacts{
 
-}
+} */
 
 .contacts h5{
     color: rgb(233, 233, 233);
@@ -665,9 +780,9 @@ h1 span{
 
 
 
-.blog-and-news{
+/* .blog-and-news{
 
-}
+} */
 
 .blog-and-news-items{
     display: flex;
